@@ -15,13 +15,9 @@
 
 ## 📖 About the Project
 
-Breast cancer is one of the most common cancers worldwide. Early and accurate detection is critical for effective treatment. This project builds a **classification model** that predicts whether a tumor is:
+This project focuses on predicting whether a tumor is benign or malignant using machine learning techniques. Early detection of breast cancer can significantly improve treatment outcomes, and this project demonstrates how ML models can assist in medical diagnosis.
 
-- 🔴 **Malignant** (Cancerous)
-- 🟢 **Benign** (Non-Cancerous)
-
-Using features extracted from digitized images of fine needle aspirate (FNA) of breast mass.
-
+The system takes input features related to cell nuclei and uses trained models to classify the cancer type.
 ---
 
 ## 📊 Dataset
@@ -66,7 +62,11 @@ Breast_Cancer_Prediction_ML/
 │
 ├── NoteBooks/
 │   └── B_Cancer.ipynb   # Main Notebook
-│
+│──model/
+|    └── Knn_model.pkl
+|     └── scaler.pkl
+|── app.py #streamlit
+|── model.py
 ├── .gitignore                   # Git ignore file
 ├── LICENSE                      # MIT License
 └── README.md                    # Project Documentation
@@ -92,19 +92,13 @@ Breast_Cancer_Prediction_ML/
 
 ### 1. Clone the Repository
 ```bash
+1. Clone the Repository
 git clone https://github.com/charan-d11/Breast_Cancer_Prediction_ML.git
 cd Breast_Cancer_Prediction_ML
-```
-
-### 2. Install Dependencies
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-```
-
-### 3. Run the Notebook
-```bash
-jupyter notebook notebooks/breast_cancer_prediction.ipynb
-```
+2. Install Dependencies
+pip install -r requirements.txt
+3. Run the Application
+streamlit run app.py
 
 ---
 
